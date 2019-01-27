@@ -28,3 +28,6 @@ task hello {
         println "Hello, Denis !!"
     }
 }
+
+def ds = task("helloMe")
+println ds
