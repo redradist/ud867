@@ -24,3 +24,11 @@
     4. Create a task named "deleteHelp". This task should perform the following:
         a) Delete the "help" folder created by the "copyWeb" task.
 */
+
+task unpackBundle(type: Copy) {
+    def zipFile = file('src/dists/dist.zip')
+    def outputDir = file("${buildDir}/unpacked/dist")
+ 
+    from zipTree(zipFile)
+    into outputDir
+}

@@ -106,8 +106,10 @@ a closure that will access the property and method of our GroovyGreeter class.
 
 */
 
+def greeting = "Another greeting"
+
 def greetingClosure = {
-    greeting = "Setting the greeting from a closure"
+    delegate.greeting = "Setting the greeting from a closure"
     printGreeting()
 }
 

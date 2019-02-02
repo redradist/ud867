@@ -31,3 +31,5 @@ task hello {
 
 def ds = task("helloMe")
 println ds
+
+task groovy << { }
